@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h1 I'm Jaded
+  p Welcome to #{title}
+  h2 I'm Jaded
+  a(href='http://fall2013.refactoru.com') Student Site
+  ul
+  li.doesnothing #{test}
+  li.doesnothingagain bye dog
+  br
+  form
+  input(type="text", placeholder="enter your name")
+  br
+  br
+  br
+  mixin employees(name, salary)
+    li #{name} has a salary of $ #{salary}
+
+  ul#employees
+    +employees("Employee 1", 12.99)
+    +employees("Employee 2", 5.99)
+  br
+  br
+  for item in ["A", "B", "C"]
+    li=item
+  br
+  if ["A", "B", "C"].length > 10
+      h1 greater than 10
+  else
+      h1 less than 10 
