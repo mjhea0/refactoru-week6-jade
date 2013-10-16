@@ -6,6 +6,7 @@
 exports.index = function(req, res){
   res.render('index', { 
   	title: 'Buck Wild',
-  	test: 'hi, dog'
+  	test: 'hi, dog',
+  	
   });
 };
